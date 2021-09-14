@@ -15,7 +15,7 @@ return [
     */
 
     'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title_prefix' => 'Email Dashboard',
     'title_postfix' => '',
 
     /*
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>E-mail</b> Dashboard',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -225,21 +225,10 @@ return [
     */
 
     'menu' => [
-        // Navbar items:
         [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
-        [
-            'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
-        ],
-
-        // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
             'text' => 'search',
+            'search' => false,
+            'topnav' => true,
         ],
         [
             'text' => 'blog',
@@ -247,76 +236,88 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text'        => 'Dashboard',
+            'url'         => 'home',
+            'icon'        => 'fas fa-fw fa-tachometer-alt',
         ],
-        ['header' => 'account_settings'],
         [
             'text' => 'profile',
-            'url'  => 'admin/settings',
+            'url'  => 'profile',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'change_password',
-            'url'  => 'admin/settings',
+            'url'  => 'password',
             'icon' => 'fas fa-fw fa-lock',
         ],
+        ['header' => 'Users Management'],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Users',
+            'icon'    => 'fa fa-user',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'All Users',
+                    'url'  => 'users',
                 ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
+                // [
+                //     'text' => 'Disabled Users',
+                //     'url'  => 'users/disabled',
+                // ],
             ],
         ],
-        ['header' => 'labels'],
+        ['header' => 'E-Mail Management'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text'    => 'Mail',
+            'icon'    => 'fab fa-product-hunt',
+            'submenu' => [
+                [
+                    'text' => 'Send Mail',
+                    'url'  => 'mail/send',
+                ],
+                // [
+                //     'text' => 'Deal Of The Day',
+                //     'url'  => 'deals-of-the-day',
+                // ],
+                // [
+                //     'text' => 'Hot Deal',
+                //     'url'  => 'hot-deal',
+                // ],
+                // [
+                //     'text' => 'Featured Products',
+                //     'url'  => 'featured',
+                // ],
+                // [
+                //     'text' => 'Disabled Products',
+                //     'url'  => 'products/disabled',
+                // ],
+            ],
         ],
+        ['header' => 'Address Management'],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text'    => 'Confirmed Mails',
+            'icon'    => 'fab fa-product-hunt',
+            'submenu' => [
+                // [
+                //     'text' => 'All Products',
+                //     'url'  => 'products',
+                // ],
+                // [
+                //     'text' => 'Deal Of The Day',
+                //     'url'  => 'deals-of-the-day',
+                // ],
+                // [
+                //     'text' => 'Hot Deal',
+                //     'url'  => 'hot-deal',
+                // ],
+                // [
+                //     'text' => 'Featured Products',
+                //     'url'  => 'featured',
+                // ],
+                // [
+                //     'text' => 'Disabled Products',
+                //     'url'  => 'products/disabled',
+                // ],
+            ],
         ],
     ],
 
