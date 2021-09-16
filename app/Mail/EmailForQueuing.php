@@ -28,6 +28,6 @@ class EmailForQueuing extends Mailable
      */
     public function build()
     {
-        return $this->view('templates.emails.restaurant');
+        return $this->view('templates.emails.restaurant')->subject('Daily Sales Report-'.$this->details['sales_date']);
     }
 }
