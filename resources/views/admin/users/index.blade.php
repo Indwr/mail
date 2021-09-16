@@ -128,7 +128,7 @@
                     if (willDelete) {
                         $.ajax({
                             type: "POST",
-                            url: "{{ url('admin/users/disable') }}/"+uuid,
+                            url: "{{ url('users/disable') }}/"+uuid,
                             data:{ "_token": "{{ csrf_token() }}",status:status},
                             dataType: "json",
                             success: function(response){

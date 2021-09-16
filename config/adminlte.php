@@ -267,17 +267,17 @@ return [
         ],
         ['header' => 'E-Mail Management'],
         [
-            'text'    => 'Mail',
+            'text'    => 'CSV',
             'icon'    => 'fab fa-product-hunt',
             'submenu' => [
                 [
-                    'text' => 'Send Mail',
-                    'url'  => 'mail/send',
+                    'text' => 'Upload CSV',
+                    'url'  => 'csv/upload',
                 ],
-                // [
-                //     'text' => 'Deal Of The Day',
-                //     'url'  => 'deals-of-the-day',
-                // ],
+                [
+                    'text' => 'List Mail Count',
+                    'url'  => 'csv',
+                ],
                 // [
                 //     'text' => 'Hot Deal',
                 //     'url'  => 'hot-deal',

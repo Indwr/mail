@@ -20,7 +20,7 @@
                                     {{session()->get('message')}}
                                 </div>
                                 @endif</h5>
-                            <form class="form-horizontal" method="POST" action="{{url('mail/upload/csv')}}" enctype="multipart/form-data">
+                            <form class="form-horizontal" method="POST" action="{{url('csv/upload/store')}}" enctype="multipart/form-data">
                                 @method('post')
                                 @csrf
                                 <div class="form-group row">

@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\MailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\PasswordResetController;
+use App\Http\Controllers\admin\UploadCsvController;
 use App\Http\Controllers\admin\UserProfileController;
 use App\Http\Controllers\admin\UsersController;
 use Illuminate\Support\Facades\Auth;
@@ -44,5 +45,8 @@ Route::get('users/disabled',[UsersController::class,'disabledUser']);
 
 Route::resource('users', 'App\Http\Controllers\admin\UsersController');
 
-Route::get('mail/send',[MailController::class,'index']);
-Route::post('mail/upload/csv',[MailController::class,'uploadCsv']);
+Route::resource('mails', 'App\Http\Controllers\admin\MailController');
+
+Route::get('csv',[UploadCsvController::class,'index']);
+Route::get('csv/upload',[UploadCsvController::class,'upload']);
+Route::post('csv/upload/store',[UploadCsvController::class,'uploadCsv']);
