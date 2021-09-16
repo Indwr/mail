@@ -112,7 +112,7 @@ Team eBOYO
 											</tr>
 											<tr>
 												<td style="font-family: Verdana,Geneva,sans-serif; font-size: 11px; line-height: 22px; color: #68617a; text-transform: uppercase; font-weight: normal; text-align: center;">
-													© 2021 <a href="[_url]" target="_blank" style="text-decoration: none; color: #68617a; text-transform: uppercase;">Powered by</a>. Dot Com Labs LLP
+													© 2021 <a href="[_url]" target="_blank" style="text-decoration: none; color: #68617a; text-transform: uppercase;">Powered by</a>  Dot Com Labs LLP
 												</td>
 											</tr>
 											<tr>
