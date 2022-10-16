@@ -319,6 +319,37 @@ return [
                 // ],
             ],
         ],
+        ['header' => 'Query Management'],
+        [
+            'text'    => 'Dr Storks Query',
+            'icon'    => 'fab fa-product-hunt',
+            'submenu' => [
+                [
+                    'text' => 'Pending',
+                    'url'  => 'dr-storks/pending',
+                ],
+                [
+                    'text' => 'Complted',
+                    'url'  => 'dr-storks/completed',
+                ],
+                // [
+                //     'text' => 'Deal Of The Day',
+                //     'url'  => 'deals-of-the-day',
+                // ],
+                // [
+                //     'text' => 'Hot Deal',
+                //     'url'  => 'hot-deal',
+                // ],
+                // [
+                //     'text' => 'Featured Products',
+                //     'url'  => 'featured',
+                // ],
+                // [
+                //     'text' => 'Disabled Products',
+                //     'url'  => 'products/disabled',
+                // ],
+            ],
+        ],
     ],
 
     /*

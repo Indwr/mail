@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\DrStorkController;
 use App\Http\Controllers\admin\MailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\PasswordResetController;
@@ -27,7 +28,7 @@ Auth::routes([
     'register' => false,
     'verify' => false
 ]);
-
+Route::group(['middleware' => ['auth']], function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 ## Password Routes ##
@@ -53,3 +54,7 @@ Route::resource('mails', 'App\Http\Controllers\admin\MailController');
 Route::get('csv',[UploadCsvController::class,'index']);
 Route::get('csv/upload',[UploadCsvController::class,'upload']);
 Route::post('csv/upload/store',[UploadCsvController::class,'uploadCsv']);
+Route::get('dr-storks/pending',[DrStorkController::class,'pending']);
+Route::get('dr-storks/completed',[DrStorkController::class,'completed']);
+Route::resource('dr-storks', 'App\Http\Controllers\admin\DrStorkController');
+});
